@@ -1,0 +1,8 @@
+.composer.json.swo
+.composer.lock
+node_nodules
+vendor
+gems_dir
+.idea
+.sass-cache
+

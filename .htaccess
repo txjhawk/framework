@@ -1,0 +1,4 @@
+# Direct them to the public folder
+RewriteEngine on
+RewriteRule (.*) public/$1 [L]
+
