@@ -17,14 +17,14 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again p
 sudo apt-get -y install mysql-server
 sudo apt-get install php5-mysql
 
-# Create project folder
+# Create our project folder
 sudo mkdir /var/www/html/${PROJECTFOLDER}
 
 # Setup host file
 VHOST=$(cat <<EOF
 <VirtualHost *:80>
-	DocumentRoot "/var/www/html/$PROJECTFOLDER"
-	<Directory "/var/www/html/$PROJECTFOLDER"
+	DocumentRoot "/var/www/html/$PROJECTFOLDER/public"
+	<Directory "/var/www/html/$PROJECTFOLDER/public"
 		AllowOverride All
 		Require all granted
 	</Directory>
@@ -46,6 +46,9 @@ sudo rm "/var/www/html/index.html"
 # Install git
 sudo apt-get -y install git
 
+# git clone GrassRoots MVC
+sudo git clone https://github.com/grassroot2013/grassroots-mvc.git "/var/www/html/${PROJECTFOLDER}"
+
 # Install composer
 curl -s https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
@@ -54,6 +57,16 @@ mv composer.phar /usr/local/bin/composer
 cd "var/www/html/${PROJECTFOLDER}"
 composer install
 
+# Install NodeJS
+sudo apt-get install -y nodejs
+
+# Install Ruby Ruby
+\curl -L https://get.rvm.io | bash -s stable
+source /usr/local/rvm/scripts/rvm
+rvm requirements
+rvm install ruby
+rvm use ruby --default
+rvm rubygems current
 
 # Create DB and install sample data
 # This is just a sample install command for a reminder will need to add more commands and sql files later
