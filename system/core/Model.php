@@ -3,8 +3,8 @@
  * Author: Anthony Allen
  */
 
-namespace core;
-use models\entity\Group;
+namespace system\core;
+use app\models\entity;
 use Doctrine\Common\Persistence\Mapping;
 /**
  * Class Model

@@ -3,9 +3,9 @@
  * Author: Anthony Allen
  */
 
-namespace core;
+namespace system\core;
 
-use core\View;
+use system\core;
 
 /**
  * Class Controller

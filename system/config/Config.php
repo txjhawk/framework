@@ -4,9 +4,9 @@
  * @desc Main configs and settings for framework.
  */
 
-namespace config;
+namespace system\config;
 
-use config\Configs;
+use system\config\Configs;
 
 
 /**

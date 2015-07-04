@@ -3,9 +3,9 @@
  * Author: Anthony Allen
  */
 
-namespace core;
+namespace system\core;
 
-use config\Config;
+use system\config\Config;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 

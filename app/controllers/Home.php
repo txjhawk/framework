@@ -2,9 +2,9 @@
 /**
  * Author: Anthony Allen
  */
-namespace controllers;
-use models\User;
-use core\Controller;
+namespace app\controllers;
+use app\models\User;
+use system\core\Controller;
 
 /**
  * Class Home

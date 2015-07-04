@@ -5,9 +5,9 @@
  * @desc Finds the controller, action, and parameters from request URL.
  */
 
-namespace core;
+namespace system\core;
 
-use config\Config;
+use system\config\Config;
 
 /**
  * Class Router

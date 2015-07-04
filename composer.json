@@ -12,7 +12,10 @@
     "doctrine/orm": "*"
   },
   "autoload": {
-    "psr-4": { "": "app/"}
+    "psr-4": {
+      "app\\": "app/",
+      "system\\": "system/"
+    }
   },
   "minimum-stability": "dev"
 }

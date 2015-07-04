@@ -3,7 +3,7 @@
  * Author: Anthony Allen
  */
 
-namespace core;
+namespace system\core;
 
 /**
  * Class View

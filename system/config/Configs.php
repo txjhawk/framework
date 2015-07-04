@@ -3,7 +3,7 @@
  * Author: Anthony Allen
  */
 
-namespace config;
+namespace system\config;
 
 
 abstract class Configs {

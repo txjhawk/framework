@@ -2,10 +2,10 @@
 /**
  * Author: Anthony Allen
  */
-namespace core;
+namespace system\core;
 
-use config\Config;
-use controllers;
+use system\config\Config;
+use app\controllers;
 
 /**
  * Class Dispatcher
@@ -23,7 +23,6 @@ class Dispatcher {
 	public static function dispatch( $router ) {
 
 		global $app;
-		$config_array = array();
 
 		$config       = new Config();
 		$config_array = $config->setConfigs();
@@ -47,7 +46,7 @@ class Dispatcher {
 
 				require_once( "../" . $controller_file );
 
-				$controller = 'controllers\\' . $router->getController();
+				$controller = 'app\controllers\\' . $router->getController();
 
 				$app = new $controller();
 
