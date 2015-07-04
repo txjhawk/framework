@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @Entity
  * @Table(name="user")
  */
-class Person
+class User
 {
 	/**
 	 * @Id

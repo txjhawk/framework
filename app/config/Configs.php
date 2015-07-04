@@ -25,8 +25,8 @@ abstract class Configs {
 	public function connectionArray() {
 
 		$this->DB_ARRAY = array(
-			"dbname"   => 'root',
-			"user"     => 'test',
+			"dbname"   => 'test',
+			"user"     => 'root',
 			"password" => 'root',
 			"host"     => '127.0.0.1',
 			"driver"   => 'pdo_mysql'
