@@ -1,5 +1,4 @@
 ## GrassRoots MVC
----
 
 #### Author: Anthony Allen
 ---
@@ -7,6 +6,7 @@
 
 * Composer
 * PHP 5.3 or later
+
 ---
 #### Description
 
