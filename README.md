@@ -7,7 +7,6 @@
 
 * Doctrine 2.0
 * Composer
-* PHP 5.3 or later
 
 ---
 #### Description
