@@ -1,7 +1,7 @@
 <?php
 namespace app\controllers;
 
-use system\core\Controller;
+use grassrootsMVC\controllers\Controller;
 
 /**
  * Class Products

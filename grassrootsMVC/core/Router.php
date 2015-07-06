@@ -5,9 +5,9 @@
  * @desc Finds the controller, action, and parameters from request URL.
  */
 
-namespace system\core;
+namespace grassrootsMVC\core;
 
-use system\config\Config;
+use grassrootsMVC\config\Config;
 
 /**
  * Class Router

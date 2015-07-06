@@ -4,7 +4,7 @@
  */
 namespace app\controllers;
 use app\models\User;
-use system\core\Controller;
+use grassrootsMVC\controllers\Controller;
 
 /**
  * Class Home

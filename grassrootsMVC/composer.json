@@ -13,8 +13,8 @@
   },
   "autoload": {
     "psr-4": {
-      "app\\": "app/",
-      "system\\": "system/"
+      "app\\": "../app/",
+      "grassrootsMVC\\": "../grassrootsMVC/"
     }
   },
   "minimum-stability": "dev"

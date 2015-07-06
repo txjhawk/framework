@@ -3,9 +3,9 @@
  * Author: Anthony Allen
  */
 
-namespace system\core;
+namespace grassrootsMVC\controllers;
 
-use system\core;
+use grassrootsMVC\views\View;
 
 /**
  * Class Controller

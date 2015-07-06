@@ -1,7 +1,7 @@
 <?php
 namespace app\models;
 
-use system\core\Model;
+use grassrootsMVC\models\Model;
 
 class User extends Model {
 

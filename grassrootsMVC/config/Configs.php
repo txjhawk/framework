@@ -3,7 +3,7 @@
  * Author: Anthony Allen
  */
 
-namespace system\config;
+namespace grassrootsMVC\config;
 
 
 abstract class Configs {

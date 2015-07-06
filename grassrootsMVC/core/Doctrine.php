@@ -3,9 +3,9 @@
  * Author: Anthony Allen
  */
 
-namespace system\core;
+namespace grassrootsMVC\core;
 
-use system\config\Config;
+use grassrootsMVC\config\Config;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 

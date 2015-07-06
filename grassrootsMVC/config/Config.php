@@ -4,9 +4,9 @@
  * @desc Main configs and settings for framework.
  */
 
-namespace system\config;
+namespace grassrootsMVC\config;
 
-use system\config\Configs;
+use grassrootsMVC\config\Configs;
 
 
 /**

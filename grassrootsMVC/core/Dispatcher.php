@@ -2,9 +2,9 @@
 /**
  * Author: Anthony Allen
  */
-namespace system\core;
+namespace grassrootsMVC\core;
 
-use system\config\Config;
+use grassrootsMVC\config\Config;
 use app\controllers;
 
 /**
@@ -40,7 +40,7 @@ class Dispatcher {
 
 			$controller = ucfirst( $controller );
 
-			$controller_file = "app/controllers/{$controller}.php";
+			$controller_file = "controllers/{$controller}.php";
 
 			if( file_exists( "../" . $controller_file ) ) {
 

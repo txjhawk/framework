@@ -3,7 +3,7 @@
  * Author: Anthony Allen
  */
 
-namespace system\core;
+namespace grassrootsMVC\views;
 
 /**
  * Class View
@@ -21,7 +21,7 @@ class View {
 
 		$this->use_layout = $layout;
 		$view             = ucfirst( $view );
-		$template_file    = "../app/views/{$view}.php";
+		$template_file    = "../views/{$view}.php";
 
 		if( file_exists( $template_file ) && $this->use_layout == FALSE ) {
 
@@ -29,8 +29,8 @@ class View {
 
 		} elseif( $this->use_layout == TRUE ) {
 
-			$layout_file_local  = "../app/views/{$view}/{$view}.php";
-			$layout_file_global = "../app/views/layouts/{$view}.php";
+			$layout_file_local  = "../views/{$view}/{$view}.php";
+			$layout_file_global = "../views/layouts/{$view}.php";
 
 			if( file_exists( $layout_file_local ) ) {
 				include_once( $layout_file_local );
