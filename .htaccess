@@ -1,4 +1,0 @@
-# Direct them to the public folder
-RewriteEngine on
-RewriteRule (.*) app/public/$1 [L]
-
