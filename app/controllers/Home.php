@@ -24,8 +24,9 @@ class Home extends Controller {
 		$data              = array();
 		$data[ 'title' ]   = 'GrassRoots MVC';
 		$data['firstname'] = $current_user['First Name'];
-		$data[ 'message' ] = 'crap';
+		$data[ 'message' ] = 'Here is a message created in our Home controller';
 
+		// Lets load our views
 		$this->view->getView( 'header', $data, TRUE );
 		$this->view->getView( 'home', $data );
 		$this->view->getView( 'footer', $data, TRUE );
