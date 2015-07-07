@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/grassroot2013/grassrootsMVC.svg?branch=master)](https://travis-ci.org/grassroot2013/grassrootsMVC)
 ## GrassRoots MVC
 
 #### Author: Anthony Allen
@@ -10,7 +11,7 @@
 ---
 #### Description
 
-A simple PHP MVC framework using composer, doctrine.
+A simple PHP MVC framework using composer and doctrine.
 
 ##### Todo
 * Add vagrant
