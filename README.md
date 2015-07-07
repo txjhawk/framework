@@ -10,7 +10,7 @@
 ---
 #### Description
 
-A simple PHP MVC framework using composer, doctrine.
+A simple PHP MVC framework using composer and doctrine.
 
 ##### Todo
 * Add vagrant
