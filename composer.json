@@ -2,6 +2,8 @@
   "name": "grassroot2013/grassrootsMVC",
   "homepage": "https://github.com/grassroot2013/grassrootsMVC",
   "license": "MIT",
+  "type": "package",
+  "version": "1.0.0",
   "author": [
     {
       "name": "Anthony Allen"
