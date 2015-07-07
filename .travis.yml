@@ -12,4 +12,4 @@ sudo: false
 
 before_script: composer install
     
-script: pupunit
+script: pupunit --configuration phpunit.xml
