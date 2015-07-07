@@ -10,6 +10,13 @@
 ---
 #### Description
 
-A simple PHP MVC framework using composer, doctrine, and vagrant.
+A simple PHP MVC framework using composer, doctrine.
+
+##### Todo
+* Add vagrant
+* Add The worlds most awesome front end framework Zurbs Foundation.
+* Write unit tests asap.
+* Create some useful libs.
+
 
 
