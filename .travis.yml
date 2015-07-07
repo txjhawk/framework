@@ -7,6 +7,6 @@ php:
     - 7.0
     - hhvm
 
-sudo: false
+#sudo: false
 
-script: vendor/bin/pupunit
+#script: vendor/bin/pupunit
