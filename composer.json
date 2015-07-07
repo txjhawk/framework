@@ -18,6 +18,5 @@
       "app\\": "../app/",
       "grassrootsMVC\\": "../grassrootsMVC/"
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
