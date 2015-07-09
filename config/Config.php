@@ -18,14 +18,14 @@ class Config extends Configs
     private $settings;
 
 
-    private $configSettings = array ();
+    private $configSettings = array();
     private $devMode        = true;
 
     public function __construct()
     {
         parent::__construct();
 
-        $this->config = Configs::factory();
+        $this->config   = Configs::factory();
         $this->settings = $this->config->frameworkSettings();
 
     }

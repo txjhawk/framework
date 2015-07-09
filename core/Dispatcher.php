@@ -25,7 +25,7 @@ class Dispatcher
 
         global $app;
 
-        $config       = new Config();
+        $config      = new Config();
         $configArray = $config->setConfigs();
 
         if ($configArray['globalProfile']) {

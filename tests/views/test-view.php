@@ -13,7 +13,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
     public function testGetView()
     {
         $this->view = new views\View();
-        $result = false;
+        $result     = false;
 
         $this->assertEquals($this->view->getView('Test'), $result);
     }

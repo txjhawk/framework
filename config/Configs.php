@@ -10,10 +10,10 @@ namespace grassrootsMVC\config;
 class Configs
 {
 
-    public $dbArray        = array ();
-    public $frameworkArray = array ();
+    public $dbArray        = array();
+    public $frameworkArray = array();
 
-    public function __construct ()
+    public function __construct()
     {
 
         $this->dbArray = $this->connectionArray();
@@ -25,14 +25,14 @@ class Configs
      *
      * @return Config
      */
-    public function factory ()
+    public function factory()
     {
         $config = 'app\config\Configs';
 
-        if (class_exists ($config)) {
+        if (class_exists($config)) {
             return new $config();
         } else {
-            return new Config();
+            return new Configs();
         }
 
     }
@@ -45,10 +45,10 @@ class Configs
      *
      * @return array
      */
-    public function connectionArray ()
+    public function connectionArray()
     {
 
-        $this->dbArray = array (
+        $this->dbArray = array(
             "dbname"   => 'test',
             "user"     => 'root',
             "password" => 'root',
@@ -66,14 +66,14 @@ class Configs
      *
      * @return array
      */
-    public function frameworkSettings ()
+    public function frameworkSettings()
     {
 
-        $this->frameworkArray = array (
+        $this->frameworkArray = array(
             "debug"             => "on",
-            "allowedUrlChars" => "/[^A-z0-9\/\^]/",
-            "globalProfile"    => true,
-            "useLayout"        => true,
+            "allowedUrlChars"   => "/[^A-z0-9\/\^]/",
+            "globalProfile"     => true,
+            "useLayout"         => true,
             "devMode"           => true,
             "defaultController" => "Home",
             "defaultAction"     => "index"
