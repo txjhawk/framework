@@ -1,7 +1,5 @@
 <?php
-/**
- * Author: Anthony Allen
- */
+
 namespace grassrootsMVC\core;
 
 use grassrootsMVC\config\Config;
@@ -9,61 +7,65 @@ use app\controllers;
 
 /**
  * Class Dispatcher
+ *
  * @package core
  */
-class Dispatcher {
+class Dispatcher
+{
 
-	/**
-	 * @desc Takes our router object as a parameter then finds controller, action
-	 * and params from router. If the controller is available it will load it and then
-	 * initialize it. After it initializes it it just accesses our action.
-	 * @param $router
-	 * @throws \Exception
-	 */
-	public static function dispatch( $router ) {
+    /**
+     * Takes our router object as a parameter then finds view, action
+     * and params from router. If the view is available it will load it and then
+     * initialize it. After it initializes it it just accesses our action.
+     *
+     * @param $router
+     * @return bool
+     */
+    public static function dispatch($router)
+    {
 
-		global $app;
+        global $app;
 
-		$config       = new Config();
-		$config_array = $config->setConfigs();
+        $config       = new Config();
+        $configArray = $config->setConfigs();
 
-		if( $config_array[ 'global_profile' ] ) {
+        if ($configArray['global_profile']) {
 
-			$start = microtime( TRUE );
-		}
+            $start = microtime(true);
+        }
 
-		$controller = $router->getController();
-		$action     = $router->getAction();
-		$params     = $router->getParams();
+        $controller = $router->getController();
+        $action     = $router->getAction();
+        $params     = $router->getParams();
 
-		if( !empty( $params ) ) {
+        if (!empty($params)) {
 
-			$controller = ucfirst( $controller );
+            $controller = ucfirst($controller);
 
-			$controller_file = "controllers/{$controller}.php";
+            $controllerFile = "controllers/{$controller}.php";
 
-			if( file_exists( "../" . $controller_file ) ) {
+            if (file_exists("../" . $controllerFile)) {
 
-				require_once( "../" . $controller_file );
+                require_once("../" . $controllerFile);
 
-				$controller = 'app\controllers\\' . $router->getController();
+                $controller = 'app\controllers\\' . $router->getController();
 
-				$app = new $controller();
+                $app = new $controller();
 
-				$app->use_layout = TRUE;
-				$app->$action();
+                $app->useLayout = true;
+                $app->$action();
 
-				if( !$app->use_layout ) {
-					$use_layout = FALSE;
-				}
+                if (!$app->useLayout) {
+                    $useLayout = false;
+                }
 
 
-			} else {
-				/** Might do a redirect instead. */
-				throw new \Exception( "Controller not found" );
-			}
+            } else {
+                /** Might do a redirect instead. */
+                return false;
+            }
 
-		} // End If
+        } // End If
 
-	}
+    }
 }

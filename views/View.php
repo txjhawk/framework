@@ -1,48 +1,48 @@
 <?php
-/**
- * Author: Anthony Allen
- */
 
 namespace grassrootsMVC\views;
 
 /**
  * Class View
+ *
  * @package core
  */
-class View {
+class View
+{
 
-	public $use_layout;
+    public $useLayout;
 
-	public function getView( $view, $data = NULL, $layout = FALSE ) {
+    public function getView ($view, $data = null, $layout = false)
+    {
 
-		if( !empty( $data ) ) {
-			extract( $data );
-		}
+        if (!empty($data)) {
+            extract ($data);
+        }
 
-		$this->use_layout = $layout;
-		$view             = ucfirst( $view );
-		$template_file    = "../views/{$view}.php";
+        $this->useLayout = $layout;
+        $view             = ucfirst ($view);
+        $templateFile    = "../views/{$view}.php";
 
-		if( file_exists( $template_file ) && $this->use_layout == FALSE ) {
+        if (file_exists ($templateFile) && $this->useLayout == false) {
 
-			include_once( $template_file );
+            include_once ($templateFile);
 
-		} elseif( $this->use_layout == TRUE ) {
+        } elseif ($this->useLayout == true) {
 
-			$layout_file_local  = "../views/{$view}/{$view}.php";
-			$layout_file_global = "../views/layouts/{$view}.php";
+            $layoutFileLocal  = "../views/{$view}/{$view}.php";
+            $layoutFileGlobal = "../views/layouts/{$view}.php";
 
-			if( file_exists( $layout_file_local ) ) {
-				include_once( $layout_file_local );
-			} else {
-				include_once( $layout_file_global );
-			}
+            if (file_exists ($layoutFileLocal)) {
+                include_once ($layoutFileLocal);
+            } else {
+                include_once ($layoutFileGlobal);
+            }
 
-		} else {
+        } else {
 
-			throw new \Exception( "View: '{$template_file}' is not found. " );
-		} // End If
+            return false;
+        } // End If
 
-	}
+    }
 
 }
