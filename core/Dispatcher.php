@@ -29,7 +29,7 @@ class Dispatcher
         $config       = new Config();
         $configArray = $config->setConfigs();
 
-        if ($configArray['global_profile']) {
+        if ($configArray['globalProfile']) {
 
             $start = microtime(true);
         }
