@@ -1,9 +1,4 @@
 <?php
-/**
- * Author: Anthony Allen
- *
- * @desc Finds the controller, action, and parameters from request URL.
- */
 
 namespace grassrootsMVC\core;
 
@@ -11,6 +6,8 @@ use grassrootsMVC\config\Config;
 
 /**
  * Class Router
+ * Finds the views, action, and parameters from request URL.
+ *
  * @package core
  */
 class Router {
@@ -58,9 +55,9 @@ class Router {
 
 				if( preg_match( $_pattern, $route ) ) {
 
-					$newrouteparts    = explode( "/", $_destination );
-					$this->controller = $newrouteparts[ 0 ];
-					$this->action     = $newrouteparts[ 1 ];
+					$newRouteParts    = explode( "/", $_destination );
+					$this->controller = $newRouteParts[ 0 ];
+					$this->action     = $newRouteParts[ 1 ];
 
 				} // End If
 
@@ -72,8 +69,9 @@ class Router {
 	}
 
 	/**
-	 * @desc If our action var is empty load our standard action otherwise lets call it.
-	 * @return mixed
+	 * If our action var is empty load our standard action otherwise lets call it.
+	 *
+     * @return mixed
 	 */
 	public function getAction() {
 		if( empty( $this->action ) ) {
@@ -86,16 +84,18 @@ class Router {
 	}
 
 	/**
-	 * @desc Get our controller so we can load it.
-	 * @return mixed
+	 * Get our views so we can load it.
+	 *
+     * @return mixed
 	 */
 	public function getController() {
 		return $this->controller;
 	}
 
 	/**
-	 * @desc Return our params array
-	 * @return mixed
+	 * Return our params array
+	 *
+     * @return mixed
 	 */
 	public function getParams() {
 		return $this->params;

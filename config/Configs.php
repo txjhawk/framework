@@ -1,39 +1,85 @@
 <?php
-/**
- * Author: Anthony Allen
- */
 
 namespace grassrootsMVC\config;
 
+/**
+ * Class Configs
+ *
+ * @package grassrootsMVC\config
+ */
+class Configs
+{
 
-abstract class Configs {
+    public $dbArray        = array ();
+    public $frameworkArray = array ();
 
-	public $DB_ARRAY    = array();
+    public function __construct ()
+    {
 
-	public function __construct() {
+        $this->dbArray = $this->connectionArray ();
 
-		$this->DB_ARRAY = $this->connectionArray();
+    }
 
-	}
+    /**
+     * Call this to check for our app/config so we can override the default settings.
+     *
+     * @return Config
+     */
+    public function factory ()
+    {
+        $config = 'app\config\Configs';
 
-	/**
-	 * @desc Change as needed for database connection.
-	 *
-	 * @desc Returns our database connection array.
-	 * @return array
-	 */
-	public function connectionArray() {
+        if (class_exists ('app/config/Configs')) {
+            return new $config();
+        } else {
+            return new Config();
+        }
 
-		$this->DB_ARRAY = array(
-			"dbname"   => 'test',
-			"user"     => 'root',
-			"password" => 'root',
-			"host"     => '127.0.0.1',
-			"driver"   => 'pdo_mysql'
-		);
+    }
 
-		return $this->DB_ARRAY;
+    /**
+     * Change as needed for database connection.
+     * Returns our database connection array.
+     *
+     * Overwrite these in app/config that will need to created when using the framework.
+     *
+     * @return array
+     */
+    public function connectionArray ()
+    {
 
-	}
+        $this->dbArray = array (
+            "dbname"   => 'test',
+            "user"     => 'root',
+            "password" => 'root',
+            "host"     => '127.0.0.1',
+            "driver"   => 'pdo_mysql'
+        );
+
+        return $this->dbArray;
+
+    }
+
+    /**
+     * Default framework settings these will need to be overwritten
+     * within the app/configs when using the framework.
+     *
+     * @return array
+     */
+    public function frameworkSettings ()
+    {
+
+        $this->frameworkArray = array (
+            "debug"             => "on",
+            "allowed_url_chars" => "/[^A-z0-9\/\^]/",
+            "global_profile"    => true,
+            "use_layout"        => true,
+            "devMode"           => true,
+            "defaultController" => "Home",
+            "defaultAction"     => "index"
+        );
+
+        return $this->frameworkArray;
+    }
 
 }
