@@ -3,7 +3,6 @@
 namespace grassrootsMVC\core;
 
 use grassrootsMVC\config\Config;
-use app\controllers;
 
 /**
  * Class Dispatcher
@@ -29,7 +28,7 @@ class Dispatcher
         $config       = new Config();
         $configArray = $config->setConfigs();
 
-        if ($configArray['global_profile']) {
+        if ($configArray['globalProfile']) {
 
             $start = microtime(true);
         }

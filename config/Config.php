@@ -2,9 +2,6 @@
 
 namespace grassrootsMVC\config;
 
-use grassrootsMVC\config\configs;
-
-
 /**
  * Class Config
  * Main configs and settings for framework.
