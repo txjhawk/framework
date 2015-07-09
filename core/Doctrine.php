@@ -17,18 +17,18 @@ class Doctrine
 
     public $em;
 
-    public function __construct ()
+    public function __construct()
     {
         $config = new Config();
 
-        $connectionOptions = $config->setParams ();
-        $devMode           = $config->getDevMode ();
-        $entities           = array ("../models/entity/");
-        $proxies            = '../models/proxies/';
+        $connectionOptions = $config->setParams();
+        $devMode           = $config->getDevMode();
+        $entities          = array ("../models/entity/");
+        $proxies           = '../models/proxies/';
 
-        $doctrineConfig = Setup::createAnnotationMetadataConfiguration ($entities, $devMode, $proxies);
+        $doctrineConfig = Setup::createAnnotationMetadataConfiguration($entities, $devMode, $proxies);
 
-        $this->em = EntityManager::create ($connectionOptions, $doctrineConfig);
+        $this->em = EntityManager::create($connectionOptions, $doctrineConfig);
 
 
     }

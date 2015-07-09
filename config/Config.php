@@ -18,6 +18,7 @@ class Config extends Configs
     private $defaultController;
     private $defaultAction;
     private $config;
+    private $settings;
 
 
     private $configSettings = array ();
@@ -28,6 +29,7 @@ class Config extends Configs
         parent::__construct();
 
         $this->config = new Configs();
+        $this->settings = $this->config->frameworkSettings();
 
     }
 
@@ -50,7 +52,7 @@ class Config extends Configs
      */
     public function defaultController()
     {
-        $this->defaultController = $this->config->frameworkArray['defaultController'];
+        $this->defaultController = $this->settings['defaultController'];
 
         return $this->defaultController;
     }
@@ -62,7 +64,7 @@ class Config extends Configs
      */
     public function defaultAction()
     {
-        $this->defaultAction = $this->config->frameworkArray['defaultAction'];
+        $this->defaultAction = $this->settings['defaultAction'];
 
         return $this->defaultAction;
     }

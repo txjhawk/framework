@@ -1,7 +1,4 @@
 <?php
-/**
- * Author: Anthony Allen
- */
 
 namespace grassrootsMVC\controllers;
 
@@ -16,7 +13,8 @@ abstract class Controller {
 
 	public $view;
 
-	public function __construct() {
+	public function __construct()
+    {
 		$this->view = new View();
 
 	}
