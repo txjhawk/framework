@@ -71,9 +71,9 @@ class Configs
 
         $this->frameworkArray = array (
             "debug"             => "on",
-            "allowed_url_chars" => "/[^A-z0-9\/\^]/",
-            "global_profile"    => true,
-            "use_layout"        => true,
+            "allowedUrlChars" => "/[^A-z0-9\/\^]/",
+            "globalProfile"    => true,
+            "useLayout"        => true,
             "devMode"           => true,
             "defaultController" => "Home",
             "defaultAction"     => "index"
