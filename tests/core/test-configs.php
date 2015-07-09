@@ -15,11 +15,11 @@ class ConfigsTest extends PHPUnit_Framework_TestCase
      * Test for config to return default controller since
      * this is i our framework and not our app.
      */
-    public function testFactory ()
+    public function testFactory()
     {
         $this->config = new config\Configs();
 
-        $this->assertEquals ($this->config, new config\configs());
+        $this->assertEquals($this->config, new config\configs());
     }
 
 }

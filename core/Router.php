@@ -18,7 +18,7 @@ class Router
     public $controller;
     public $params;
     public $config;
-    public $configArray = array ();
+    public $configArray = array();
 
     public function __construct()
     {
@@ -36,11 +36,11 @@ class Router
             }
         }
 
-        $route              = $path[0];
+        $route             = $path[0];
         $sanitizingPattern = $this->configArray['allowedUrlChars'];
-        $route              = preg_replace($sanitizingPattern, "", $route);
-        $route              = str_replace("^", "", $route);
-        $this->route        = $route;
+        $route             = preg_replace($sanitizingPattern, "", $route);
+        $route             = str_replace("^", "", $route);
+        $this->route       = $route;
 
         $routeParts       = explode("/", $route);
         $this->controller = $routeParts[0];

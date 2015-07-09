@@ -12,13 +12,14 @@ use grassrootsMVC\core;
 abstract class Model
 {
 
-	public $em = '';
+    public $em = '';
 
-	public function __construct(){
+    public function __construct()
+    {
 
-		$doctrine = new core\Doctrine();
+        $doctrine = new core\Doctrine();
 
-		$this->em = $doctrine->em;
-	}
+        $this->em = $doctrine->em;
+    }
 
 }
