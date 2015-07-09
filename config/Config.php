@@ -25,7 +25,7 @@ class Config extends Configs
     {
         parent::__construct();
 
-        $this->config = new Configs();
+        $this->config = Configs::factory();
         $this->settings = $this->config->frameworkSettings();
 
     }
@@ -37,7 +37,7 @@ class Config extends Configs
      */
     public function setParams()
     {
-        $this->params = $this->dbArray;
+        $this->params = $this->config->connectionArray();
 
         return $this->params;
     }

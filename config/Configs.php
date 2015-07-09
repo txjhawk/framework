@@ -16,7 +16,7 @@ class Configs
     public function __construct ()
     {
 
-        $this->dbArray = $this->connectionArray ();
+        $this->dbArray = $this->connectionArray();
 
     }
 
@@ -29,7 +29,7 @@ class Configs
     {
         $config = 'app\config\Configs';
 
-        if (class_exists ('app/config/Configs')) {
+        if (class_exists ($config)) {
             return new $config();
         } else {
             return new Config();
