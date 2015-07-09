@@ -3,7 +3,6 @@
 namespace grassrootsMVC\core;
 
 use grassrootsMVC\config\Config;
-use app\controllers;
 
 /**
  * Class Dispatcher

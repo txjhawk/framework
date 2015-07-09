@@ -1,11 +1,7 @@
 <?php
-/**
- * Author: Anthony Allen
- */
 
 namespace grassrootsMVC\models;
 
-use app\models\entity;
 use Doctrine\Common\Persistence\Mapping;
 use grassrootsMVC\core;
 
