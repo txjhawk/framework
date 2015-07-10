@@ -5,12 +5,13 @@
  */
 
 /** Vendor Directory Constant */
-define( 'VENDOR_DIR', 'vendor/' );
+define('VENDOR_DIR', 'vendor/');
+define('ENTITIES', '/../../../app/models/entity');
 
 /**
  * Require Composers Autoloader
  */
-require( VENDOR_DIR . 'autoload.php' );
+require(VENDOR_DIR . 'autoload.php');
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
@@ -29,7 +30,7 @@ $isDevMode = true;
  *
  * @var  $config
  */
-$config    = Setup::createAnnotationMetadataConfiguration( array('app/models/entity'), $isDevMode );
+$config = Setup::createAnnotationMetadataConfiguration(array(ENTITIES), $isDevMode);
 
 /**
  * Setup our connections for our local host
@@ -37,11 +38,11 @@ $config    = Setup::createAnnotationMetadataConfiguration( array('app/models/ent
  * @var  $conn
  */
 $conn = array(
-	"dbname" => 'test',
-	"user" => 'root',
-	"password" => '',
-	"host" => '127.0.0.1',
-	"driver" => 'pdo_mysql'
+    "dbname"   => 'test',
+    "user"     => 'root',
+    "password" => '',
+    "host"     => '127.0.0.1',
+    "driver"   => 'pdo_mysql'
 );
 
 /**
@@ -50,6 +51,6 @@ $conn = array(
  *
  * @var  $entityManager
  */
-$entityManager = EntityManager::create( $conn, $config );
+$entityManager = EntityManager::create($conn, $config);
 
-return ConsoleRunner::createHelperSet( $entityManager );
+return ConsoleRunner::createHelperSet($entityManager);
