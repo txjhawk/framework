@@ -23,13 +23,12 @@ class Doctrine
 
         $connectionOptions = $config->setParams();
         $devMode           = $config->getDevMode();
-        $entities          = array("../models/entity/");
+        $entities          = array("");
         $proxies           = '../models/proxies/';
 
         $doctrineConfig = Setup::createAnnotationMetadataConfiguration($entities, $devMode, $proxies);
 
         $this->em = EntityManager::create($connectionOptions, $doctrineConfig);
-
 
     }
 }

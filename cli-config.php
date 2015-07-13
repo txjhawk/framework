@@ -5,8 +5,7 @@
  */
 
 /** Vendor Directory Constant */
-define('VENDOR_DIR', 'vendor/');
-define('ENTITIES', '/../../../app/models/entity');
+define('VENDOR_DIR', '../../../vendor/');
 
 /**
  * Require Composers Autoloader
@@ -16,6 +15,18 @@ require(VENDOR_DIR . 'autoload.php');
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use grassrootsMVC\config\Config;
+
+
+$config              = new Config();
+$config->configArray = $config->setConfigs();
+
+/**
+ * This will retrieve our connection parameters so we can connect.
+ *
+ * @var  $connectionOptions
+ */
+$connectionOptions = $config->setParams();
 
 /**
  * If true caching is done in memory with the ArrayCache. Proxy objects are recreated on every request.
@@ -23,7 +34,7 @@ use Doctrine\ORM\Tools\Console\ConsoleRunner;
  *
  * @var  $isDevMode
  */
-$isDevMode = true;
+$devMode = $config->getDevMode();
 
 /**
  * Change entity directory based upon your standards.
@@ -37,13 +48,8 @@ $config = Setup::createAnnotationMetadataConfiguration(array(ENTITIES), $isDevMo
  *
  * @var  $conn
  */
-$conn = array(
-    "dbname"   => 'test',
-    "user"     => 'root',
-    "password" => '',
-    "host"     => '127.0.0.1',
-    "driver"   => 'pdo_mysql'
-);
+$cliConfig = Setup::createAnnotationMetadataConfiguration(array($config->configArray['entities']), $devMode);
+
 
 /**
  * Provides us an access point to Doctrines EntityManager.
@@ -51,6 +57,12 @@ $conn = array(
  *
  * @var  $entityManager
  */
-$entityManager = EntityManager::create($conn, $config);
+$entityManager = EntityManager::create($connectionOptions, $cliConfig);
 
 return ConsoleRunner::createHelperSet($entityManager);
+
+/**
+ * To run our command line within grassrootsMVC, or this file can be added to your custom app and ran from there.
+ *  ../../bin/doctrine orm:schema-tool:create
+ */
+

@@ -28,11 +28,6 @@ class Dispatcher
         $config      = new Config();
         $configArray = $config->setConfigs();
 
-        if ($configArray['globalProfile']) {
-
-            $start = microtime(true);
-        }
-
         $controller = $router->getController();
         $action     = $router->getAction();
         $params     = $router->getParams();
