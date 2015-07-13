@@ -5,12 +5,12 @@
  */
 
 /** Vendor Directory Constant */
-define( 'VENDOR_DIR', '../../../vendor/' );
+define('VENDOR_DIR', '../../../vendor/');
 
 /**
  * Require Composers Autoloader
  */
-require( VENDOR_DIR . 'autoload.php' );
+require(VENDOR_DIR . 'autoload.php');
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
@@ -18,7 +18,7 @@ use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use grassrootsMVC\config\Config;
 
 
-$config = new Config();
+$config              = new Config();
 $config->configArray = $config->setConfigs();
 
 /**
@@ -34,14 +34,22 @@ $connectionOptions = $config->setParams();
  *
  * @var  $isDevMode
  */
-$devMode           = $config->getDevMode();
+$devMode = $config->getDevMode();
 
 /**
  * Change entity directory based upon your standards.
  *
  * @var  $config
  */
-$cliConfig    = Setup::createAnnotationMetadataConfiguration( array($config->configArray['entities']), $devMode );
+$config = Setup::createAnnotationMetadataConfiguration(array(ENTITIES), $isDevMode);
+
+/**
+ * Setup our connections for our local host
+ *
+ * @var  $conn
+ */
+$cliConfig = Setup::createAnnotationMetadataConfiguration(array($config->configArray['entities']), $devMode);
+
 
 /**
  * Provides us an access point to Doctrines EntityManager.
@@ -49,11 +57,12 @@ $cliConfig    = Setup::createAnnotationMetadataConfiguration( array($config->con
  *
  * @var  $entityManager
  */
-$entityManager = EntityManager::create( $connectionOptions, $cliConfig );
+$entityManager = EntityManager::create($connectionOptions, $cliConfig);
 
-return ConsoleRunner::createHelperSet( $entityManager );
+return ConsoleRunner::createHelperSet($entityManager);
 
 /**
  * To run our command line within grassrootsMVC, or this file can be added to your custom app and ran from there.
  *  ../../bin/doctrine orm:schema-tool:create
  */
+
