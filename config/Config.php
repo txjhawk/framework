@@ -16,10 +16,7 @@ class Config extends Configs
     private $defaultAction;
     private $config;
     private $settings;
-
-
     private $configSettings = array();
-    private $devMode        = true;
 
     public function __construct()
     {
@@ -33,7 +30,7 @@ class Config extends Configs
     /**
      * Our connections params that are needed for doctrine.
      *
-     * @return array|string
+     * @return array|string $this->params
      */
     public function setParams()
     {
@@ -45,7 +42,7 @@ class Config extends Configs
     /**
      * Set your default views name that will load automatically.
      *
-     * @return string
+     * @return string $this->defaultController
      */
     public function defaultController()
     {
@@ -57,7 +54,7 @@ class Config extends Configs
     /**
      * Set your default action name that will be loaded automatically.
      *
-     * @return string
+     * @return string $this->defaultAction
      */
     public function defaultAction()
     {
@@ -69,7 +66,7 @@ class Config extends Configs
     /**
      * This is some of our settings that will need to be changed per environment.
      *
-     * @return array
+     * @return array $this->configSettings
      */
     public function setConfigs()
     {
@@ -82,7 +79,7 @@ class Config extends Configs
      * This is passed as an argument to doctrine so we can set it to true or false to tell
      * Doctrine that we are in dev mode not production and not to cache or sql.
      *
-     * @return bool
+     * @return bool $this->config->frameworkArray['devMode']
      */
     public function getDevMode()
     {
