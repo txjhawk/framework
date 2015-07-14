@@ -8,14 +8,13 @@ use grassrootsMVC\views;
 class ViewTest extends PHPUnit_Framework_TestCase
 {
 
-    public $view;
+	public $view;
 
-    public function testGetView()
-    {
-        $this->view = new views\View();
-        $result     = false;
+	public function testGetView()
+	{
+		$this->view = new views\View();
 
-        $this->assertEquals($this->view->getView('Test'), $result);
-    }
+		$this->assertEquals($this->view->getView('Test'), FALSE);
+	}
 
 }
