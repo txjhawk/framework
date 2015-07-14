@@ -13,7 +13,18 @@
 
 A simple PHP MVC framework using composer and doctrine.
 
-#### To use this framework with composer create your composer file and add this code.
+##### Usage
+
+Create your project directory something like this.
+
+```sh
+    - src/
+    -   app/
+    -   composer.json
+```
+
+To use this framework with composer create your composer file and add this code.
+
 ```sh
 {
   "name": "Skeleton App",
@@ -41,6 +52,21 @@ A simple PHP MVC framework using composer and doctrine.
         }
       }
 }
+```
+
+After running command "composer install" you should get somthing similar to this.
+
+```sh
+    - src/
+    -   app/
+    -   vendor/
+    -       bin/
+    -       composer/
+    -       doctrine/
+    -       grassroot2013/grassrootsMVC/
+    -       symfony/
+    -       autoload.php
+    -   composer.json
 ```
 
 ##### Todo
