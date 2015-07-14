@@ -16,9 +16,12 @@ A simple PHP MVC framework using composer and doctrine.
 ##### Usage
 
 Create your project directory something like
+
+```sh
     - src/
     -   app/
     -   composer.json
+```
 
 To use this framework with composer create your composer file and add this code.
 
@@ -52,6 +55,8 @@ To use this framework with composer create your composer file and add this code.
 ```
 
 After running command "composer install" you should get.
+
+```sh
     - src/
     -   app/
     -   vendor/
@@ -62,6 +67,7 @@ After running command "composer install" you should get.
     -       symfony/
     -       autoload.php
     -   composer.json
+```
 
 ##### Todo
 * Add vagrant
