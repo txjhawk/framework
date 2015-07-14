@@ -15,7 +15,7 @@ A simple PHP MVC framework using composer and doctrine.
 
 ##### Usage
 
-Create your project directory something like
+Create your project directory something like this.
 
 ```sh
     - src/
@@ -54,7 +54,7 @@ To use this framework with composer create your composer file and add this code.
 }
 ```
 
-After running command "composer install" you should get.
+After running command "composer install" you should get somthing similar to this.
 
 ```sh
     - src/
