@@ -4,7 +4,6 @@ namespace grassrootsMVC\config;
 
 /**
  * Class Configs
- *
  * @package grassrootsMVC\config
  */
 class Configs

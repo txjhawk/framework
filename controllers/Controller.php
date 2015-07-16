@@ -6,11 +6,10 @@ use grassrootsMVC\views\View;
 
 /**
  * Class Controller
- * @package core
+ * @package grassrootsMVC\controllers
  */
-abstract class Controller
+abstract class Controller implements Controller_Interface
 {
-
 
     public $view;
 

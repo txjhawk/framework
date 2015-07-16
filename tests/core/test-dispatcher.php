@@ -5,6 +5,10 @@ use PHPUnit_Framework_TestCase;
 use grassrootsMVC\core\Dispatcher;
 use grassrootsMVC\core\Router;
 
+/**
+ * Class DispatcherTest
+ * @package grassrootsMVC\test\dispatcher
+ */
 class DispatcherTest extends PHPUnit_Framework_TestCase
 {
 	public $dispatch;

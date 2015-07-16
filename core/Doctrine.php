@@ -6,11 +6,9 @@ use grassrootsMVC\config\Config;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-
 /**
  * Class Doctrine
- *
- * @package core
+ * @package grassrootsMVC\core
  */
 class Doctrine
 {

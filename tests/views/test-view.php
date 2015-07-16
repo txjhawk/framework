@@ -5,6 +5,10 @@ namespace grassrootsMVC\tests\view;
 use PHPUnit_Framework_TestCase;
 use grassrootsMVC\views;
 
+/**
+ * Class ViewTest
+ * @package grassrootsMVC\tests\view
+ */
 class ViewTest extends PHPUnit_Framework_TestCase
 {
 

@@ -4,8 +4,7 @@ namespace grassrootsMVC\views;
 
 /**
  * Class View
- *
- * @package core
+ * @package grassrootsMVC\views
  */
 class View
 {

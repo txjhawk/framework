@@ -7,7 +7,7 @@ use grassrootsMVC\core;
 
 /**
  * Class Model
- * @package core\Model
+ * @package grassrootsMVC\models
  */
 abstract class Model
 {

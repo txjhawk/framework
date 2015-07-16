@@ -5,6 +5,10 @@ use PHPUnit_Framework_TestCase;
 use grassrootsMVC\config\Config;
 use grassrootsMVC\core\Router;
 
+/**
+ * Class RouterTest
+ * @package grassrootsMVC\test\router
+ */
 class RouterTest extends PHPUnit_Framework_TestCase
 {
 	public $router;
