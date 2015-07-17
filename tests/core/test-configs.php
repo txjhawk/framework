@@ -5,7 +5,10 @@ namespace grassrootsMVC\tests\configs;
 use PHPUnit_Framework_TestCase;
 use grassrootsMVC\config;
 
-
+/**
+ * Class ConfigsTest
+ * @package grassrootsMVC\tests\configs
+ */
 class ConfigsTest extends PHPUnit_Framework_TestCase
 {
 

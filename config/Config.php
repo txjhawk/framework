@@ -3,10 +3,10 @@
 namespace grassrootsMVC\config;
 
 /**
- * Class Config
  * Main configs and settings for framework.
  *
- * @package config
+ * Class Config
+ * @package grassrootsMVC\config
  */
 class Config extends Configs
 {

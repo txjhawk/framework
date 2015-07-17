@@ -6,8 +6,7 @@ use grassrootsMVC\config\Config;
 
 /**
  * Class Dispatcher
- *
- * @package core
+ * @package grassrootsMVC\core
  */
 class Dispatcher
 {

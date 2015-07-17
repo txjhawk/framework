@@ -5,10 +5,10 @@ namespace grassrootsMVC\core;
 use grassrootsMVC\config\Config;
 
 /**
- * Class Router
  * Finds the views, action, and parameters from request URL.
  *
- * @package core
+ * Class Router
+ * @package grassrootsMVC\core
  */
 class Router
 {
