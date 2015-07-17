@@ -11,54 +11,58 @@ use grassrootsMVC\config\Config;
 class Dispatcher
 {
 
-    /**
-     * Takes our router object as a parameter then finds view, action
-     * and params from router. If the view is available it will load it and then
-     * initialize it. After it initializes it it just accesses our action.
-     *
-     * @param $router
-     * @return bool
-     */
-    public static function dispatch($router)
-    {
+	/**
+	 * Takes our router object as a parameter then finds view, action
+	 * and params from router. If the view is available it will load it and then
+	 * initialize it. After it initializes it it just accesses our action.
+	 *
+	 * @param $router
+	 *
+	 * @return bool
+	 */
+	public static function dispatch($router)
+	{
 
-        global $app;
+		global $app;
 
-        $config      = new Config();
-        $configArray = $config->setConfigs();
+		$controller = $router->getController();
+		$action     = $router->getAction();
+		$params     = $router->getParams();
 
-        $controller = $router->getController();
-        $action     = $router->getAction();
-        $params     = $router->getParams();
+		if (!empty($params)) {
 
-        if (!empty($params)) {
+			$controller    = ucfirst($controller);
+			$controllerSub = strtolower($controller);
 
-            $controller = ucfirst($controller);
+			$controllerFile    = "controllers/{$controller}.php";
+			$controllerFileSub = "controllers/" . $controllerSub . "/" . $controller . ".php";
 
-            $controllerFile = "controllers/{$controller}.php";
+			if (file_exists("../" . $controllerFile)) {
 
-            if (file_exists("../" . $controllerFile)) {
+				require_once("../" . $controllerFile);
 
-                require_once("../" . $controllerFile);
+				$controller = 'app\controllers\\' . $router->getController();
 
-                $controller = 'app\controllers\\' . $router->getController();
+				$app = new $controller();
+				$app->$action();
 
-                $app = new $controller();
+			}
+			elseif (file_exists("../" . $controllerFileSub)) {
 
-                $app->useLayout = true;
-                $app->$action();
+				require_once("../" . $controllerFileSub);
 
-                if (!$app->useLayout) {
-                    $useLayout = false;
-                }
+				$controller = 'app\controllers\\' . $controllerSub . '\\' . $router->getController();
 
+				$app = new $controller();
+				$app->$action();
 
-            } else {
-                /** Might do a redirect instead. */
-                return false;
-            }
+			}
+			else {
 
-        } // End If
+				return false;
+			}
 
-    }
+		} // End If
+
+	}
 }
