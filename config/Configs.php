@@ -9,7 +9,18 @@ namespace grassrootsMVC\config;
 class Configs
 {
 
-    public $dbArray        = array();
+    /**
+     * This will store all of our database settings.
+     *
+     * @var array
+     */
+    public $dbArray = array();
+
+    /**
+     * Our main framework settings will be stored in this array.
+     *
+     * @var array
+     */
     public $frameworkArray = array();
 
     public function __construct()
@@ -101,6 +112,18 @@ class Configs
         );
 
         return $this->frameworkArray;
+    }
+
+    /**
+     * Define our WEB_ROOT constant so we have access to our public folder for loading our styles and js.
+     *
+     * @return string
+     */
+    public function setWebRoot()
+    {
+        define('WEB_ROOT', 'http://localhost/sample-app/app/public');
+
+        return WEB_ROOT;
     }
 
 }

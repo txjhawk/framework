@@ -86,5 +86,15 @@ class Config extends Configs
         return $this->config->frameworkArray['devMode'];
     }
 
+    /**
+     * Lets grab our WEB_ROOT constant defined in our configs.
+     *
+     * @return string
+     */
+    public function getWebRoot()
+    {
+        return $this->config->setWebRoot();
+    }
+
 
 }
