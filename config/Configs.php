@@ -26,7 +26,7 @@ class Configs
     public function __construct()
     {
 
-        $this->dbArray = $this->connectionArray();
+        $this->dbArray = $this->setDbParamsArray();
 
     }
 
@@ -55,7 +55,7 @@ class Configs
      *
      * @return array
      */
-    public function connectionArray()
+    public function setDbParamsArray()
     {
 
         $this->dbArray = array(
