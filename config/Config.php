@@ -87,13 +87,23 @@ class Config extends Configs
     }
 
     /**
-     * Lets grab our WEB_ROOT constant defined in our configs.
+     * This will grab our WEB_ROOT constant defined in our configs.
      *
-     * @return string
+     * @return mixed
      */
     public function getWebRoot()
     {
         return $this->config->setWebRoot();
+    }
+
+    /**
+     * This will grab our HOME_URL constant defined in our configs.
+     *
+     * @return mixed
+     */
+    public function getHomeURL()
+    {
+        return $this->config->setHomeUrl();
     }
 
 
