@@ -10,6 +10,20 @@ class Configs
 {
 
     /**
+     * This will be used to load our resources like images, styles and js.
+     *
+     * @var const
+     */
+    const WEB_ROOT = "http://localhost/sample-app";
+
+	/**
+	 * This will be used for loading our home page when we need to do redirects and etc.
+	 *
+	 * @var const
+	 */
+	const HOME_URL = "http://localhost/grassroots-mvc-app";
+
+	/**
      * This will store all of our database settings.
      *
      * @var array
@@ -102,7 +116,7 @@ class Configs
 
         $this->frameworkArray = array(
             "debug"             => "on",
-            "allowedUrlChars"   => "/[^A-z0-9\/\^]/",
+            "allowedUrlChars"   => "/[^A-z0-9\\^]/",
             "globalProfile"     => true,
             "useLayout"         => true,
             "devMode"           => true,
@@ -114,15 +128,23 @@ class Configs
         return $this->frameworkArray;
     }
 
-    /**
-     * Define our WEB_ROOT constant so we have access to our public folder for loading our styles and js.
-     *
-     * @return string
-     */
+	/**
+	 * Get HOME_URL constant so we have access to our home page.
+	 *
+	 * @return mixed
+	 */
+	public function setHomeUrl()
+	{
+		return HOME_URL;
+	}
+
+	/**
+	 * Get WEB_ROOT constant so we have access to our public folder for loading our styles and js.
+	 *
+	 * @return mixed
+	 */
     public function setWebRoot()
     {
-        define('WEB_ROOT', 'http://localhost/sample-app/app/public');
-
         return WEB_ROOT;
     }
 
