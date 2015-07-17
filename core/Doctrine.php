@@ -19,7 +19,7 @@ class Doctrine
     {
         $config = new Config();
 
-        $connectionOptions = $config->setParams();
+        $connectionOptions = $config->getParamsArray();
         $devMode           = $config->getDevMode();
         $entities          = array("");
         $proxies           = '../models/proxies/';

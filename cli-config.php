@@ -26,7 +26,7 @@ $config->configArray = $config->setConfigs();
  *
  * @var  $connectionOptions
  */
-$connectionOptions = $config->setParams();
+$connectionOptions = $config->setDbParamsArray();
 
 /**
  * If true caching is done in memory with the ArrayCache. Proxy objects are recreated on every request.
@@ -40,13 +40,6 @@ $devMode = $config->getDevMode();
  * Change entity directory based upon your standards.
  *
  * @var  $config
- */
-$config = Setup::createAnnotationMetadataConfiguration(array(ENTITIES), $isDevMode);
-
-/**
- * Setup our connections for our local host
- *
- * @var  $conn
  */
 $cliConfig = Setup::createAnnotationMetadataConfiguration(array($config->configArray['entities']), $devMode);
 

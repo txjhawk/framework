@@ -32,9 +32,9 @@ class Config extends Configs
      *
      * @return array|string $this->params
      */
-    public function setParams()
+    public function getParamsArray()
     {
-        $this->params = $this->config->connectionArray();
+        $this->params = $this->config->setDbParamsArray();
 
         return $this->params;
     }
