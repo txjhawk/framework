@@ -2,7 +2,6 @@
 
 namespace grassrootsMVC\core;
 
-use grassrootsMVC\config\Config;
 
 /**
  * Class Dispatcher
@@ -22,8 +21,6 @@ class Dispatcher
 	 */
 	public static function dispatch($router)
 	{
-
-		global $app;
 
 		$controller = $router->getController();
 		$action     = $router->getAction();
