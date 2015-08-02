@@ -6,7 +6,7 @@ namespace GrassRootsMVC\Configs;
  * Main configs and settings for framework.
  *
  * Class Config
- * @package grassrootsMVC\config
+ * @package GrassRootsMVC\Configs
  */
 class Config extends Configs
 {

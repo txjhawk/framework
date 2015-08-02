@@ -2,10 +2,9 @@
 
 namespace GrassRootsMVC\Routing;
 
-
 /**
  * Class Dispatcher
- * @package grassrootsMVC\core
+ * @package GrassRootsMVC\Routing
  */
 class Dispatcher
 {

@@ -8,7 +8,7 @@ use GrassRootsMVC\Configs\Config;
  * Finds the views, action, and parameters from request URL.
  *
  * Class Router
- * @package grassrootsMVC\core
+ * @package GrassRootsMVC\Routing
  */
 class Router
 {

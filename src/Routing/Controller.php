@@ -2,11 +2,11 @@
 
 namespace GrassRootsMVC\Routing;
 
-use GrassRootsMVC\views\View;
+use GrassRootsMVC\Views\View;
 
 /**
  * Class Controller
- * @package grassrootsMVC\controllers
+ * @package GrassRootsMVC\Routing
  */
 abstract class Controller implements Controller_Interface
 {

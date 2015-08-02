@@ -6,7 +6,7 @@ namespace GrassRootsMVC\Routing;
  * add the most common methods that we wan't in our app controllers.
  *
  * Interface Controller_Interface
- * @package grassrootsMVC\controllers
+ * @package GrassRootsMVC\Routing
  */
 interface Controller_Interface
 {
