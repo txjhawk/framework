@@ -8,7 +8,7 @@ use GrassRootsMVC\Views\View;
  * Class Controller
  * @package GrassRootsMVC\Routing
  */
-abstract class Controller implements Controller_Interface
+abstract class Controller
 {
 
     public $view;
@@ -21,6 +21,8 @@ abstract class Controller implements Controller_Interface
         $this->view = new View();
 
     }
+
+    abstract function index();
 
 }
 
