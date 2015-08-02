@@ -1,6 +1,6 @@
 <?php
 
-namespace grassrootsMVC\config;
+namespace GrassRootsMVC\Configs;
 
 /**
  * Main configs and settings for framework.

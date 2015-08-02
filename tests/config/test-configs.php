@@ -1,9 +1,9 @@
 <?php
 
-namespace grassrootsMVC\tests\configs;
+namespace GrassRootsMVC\tests\configs;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\config;
+use GrassRootsMVC\Configs;
 
 /**
  * Class ConfigsTest
@@ -20,9 +20,9 @@ class ConfigsTest extends PHPUnit_Framework_TestCase
      */
     public function testFactory()
     {
-        $this->config = new config\Configs();
+        $this->config = new Configs\Configs();
 
-        $this->assertEquals($this->config, new config\configs());
+        $this->assertEquals($this->config, new Configs\configs());
     }
 
 }

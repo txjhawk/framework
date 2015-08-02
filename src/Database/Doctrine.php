@@ -1,8 +1,8 @@
 <?php
 
-namespace grassrootsMVC\core;
+namespace GrassRootsMVC\Database;
 
-use grassrootsMVC\config\Config;
+use GrassRootsMVC\Configs\Config;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 

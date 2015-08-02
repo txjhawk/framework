@@ -1,5 +1,5 @@
 <?php
-namespace grassrootsMVC\controllers;
+namespace GrassRootsMVC\Routing;
 
 /**
  * Lets give our parent abstract controller some structure and

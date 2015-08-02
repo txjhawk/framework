@@ -1,9 +1,9 @@
 <?php
 
-namespace grassrootsMVC\tests\configs;
+namespace GrassRootsMVC\tests\configs;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\config;
+use GrassRootsMVC\Configs;
 
 class ConfigTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +12,7 @@ class ConfigTest extends PHPUnit_Framework_TestCase
 
 	public function testGetHomeURL()
 	{
-		$this->config = new config\Config();
+		$this->config = new Configs\Config();
 
 		$this->assertNotEmpty($this->config->getHomeURL());
 	}

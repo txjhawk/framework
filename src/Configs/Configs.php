@@ -1,6 +1,6 @@
 <?php
 
-namespace grassrootsMVC\config;
+namespace GrassRootsMVC\Configs;
 
 /**
  * Class Configs

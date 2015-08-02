@@ -1,9 +1,9 @@
 <?php
-namespace grassrootsMVC\test\dispatcher;
+namespace GrassRootsMVC\test\dispatcher;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\core\Dispatcher;
-use grassrootsMVC\core\Router;
+use GrassRootsMVC\Routing\Dispatcher;
+use GrassRootsMVC\Routing\Router;
 
 /**
  * Class DispatcherTest

@@ -1,9 +1,9 @@
 <?php
-namespace grassrootsMVC\test\router;
+namespace GrassRootsMVC\test\router;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\config\Config;
-use grassrootsMVC\core\Router;
+use GrassRootsMVC\Configs\Config;
+use GrassRootsMVC\Routing\Router;
 
 /**
  * Class RouterTest

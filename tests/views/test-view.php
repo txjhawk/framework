@@ -1,9 +1,9 @@
 <?php
 
-namespace grassrootsMVC\tests\view;
+namespace GrassRootsMVC\tests\view;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\views;
+use GrassRootsMVC\Views;
 
 /**
  * Class ViewTest
@@ -16,7 +16,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 
 	public function testGetView()
 	{
-		$this->view = new views\View();
+		$this->view = new Views\View();
 
 		$this->assertEquals($this->view->getView('Test'), FALSE);
 	}

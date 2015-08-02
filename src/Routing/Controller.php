@@ -1,8 +1,8 @@
 <?php
 
-namespace grassrootsMVC\controllers;
+namespace GrassRootsMVC\Routing;
 
-use grassrootsMVC\views\View;
+use GrassRootsMVC\views\View;
 
 /**
  * Class Controller
