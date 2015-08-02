@@ -8,7 +8,7 @@ use Doctrine\ORM\EntityManager;
 
 /**
  * Class Doctrine
- * @package grassrootsMVC\core
+ * @package GrassRootsMVC\Database
  */
 class Doctrine
 {

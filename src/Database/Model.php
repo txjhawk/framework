@@ -7,7 +7,7 @@ use GrassRootsMVC\Database;
 
 /**
  * Class Model
- * @package grassrootsMVC\models
+ * @package GrassRootsMVC\Database
  */
 abstract class Model
 {
