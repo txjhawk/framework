@@ -3,7 +3,7 @@
 namespace GrassRootsMVC\Database;
 
 use Doctrine\Common\Persistence\Mapping;
-use GrassRootsMVC\Routing;
+use GrassRootsMVC\Database;
 
 /**
  * Class Model
@@ -17,7 +17,7 @@ abstract class Model
     public function __construct()
     {
 
-        $doctrine = new Routing\Doctrine();
+        $doctrine = new Database\Doctrine();
 
         $this->em = $doctrine->em;
     }
