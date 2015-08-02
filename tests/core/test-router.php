@@ -2,7 +2,7 @@
 namespace GrassRootsMVC\test\router;
 
 use PHPUnit_Framework_TestCase;
-use GrassRootsMVC\Config\Config;
+use GrassRootsMVC\Configs\Config;
 use GrassRootsMVC\Routing\Router;
 
 /**

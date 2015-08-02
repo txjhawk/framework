@@ -2,7 +2,7 @@
 
 namespace GrassRootsMVC\Routing;
 
-use GrassRootsMVC\Config\Config;
+use GrassRootsMVC\Configs\Config;
 
 /**
  * Finds the views, action, and parameters from request URL.

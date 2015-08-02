@@ -2,7 +2,7 @@
 
 namespace GrassRootsMVC\Database;
 
-use GrassRootsMVC\Config\Config;
+use GrassRootsMVC\Configs\Config;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
