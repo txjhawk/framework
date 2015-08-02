@@ -1,6 +1,6 @@
 <?php
 
-namespace grassrootsMVC\views;
+namespace GrassRootsMVC\Views;
 
 /**
  * Class View

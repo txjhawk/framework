@@ -1,9 +1,9 @@
 <?php
 
-namespace grassrootsMVC\tests\configs;
+namespace GrassRootsMVC\tests\configs;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\config;
+use GrassRootsMVC\Config;
 
 /**
  * Class ConfigsTest

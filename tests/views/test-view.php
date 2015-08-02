@@ -1,9 +1,9 @@
 <?php
 
-namespace grassrootsMVC\tests\view;
+namespace GrassRootsMVC\tests\view;
 
 use PHPUnit_Framework_TestCase;
-use grassrootsMVC\views;
+use GrassRootsMVC\Views;
 
 /**
  * Class ViewTest

@@ -1,6 +1,6 @@
 <?php
 
-namespace grassrootsMVC\core;
+namespace GrassRootsMVC\Routing;
 
 
 /**
