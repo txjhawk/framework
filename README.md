@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/grassroot2013/grassrootsMVC.svg?branch=master)](https://travis-ci.org/grassroot2013/grassrootsMVC)
+[![Build Status](https://travis-ci.org/grassroot2013/framework.svg?branch=master)](https://travis-ci.org/grassroot2013/framework)
 ## GrassRoots MVC
 
 #### Author: Anthony Allen
